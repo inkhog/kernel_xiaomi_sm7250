@@ -28,7 +28,7 @@ TARGET_KERNEL_DTBO=arch/arm64/boot/dtbo.img
 TARGET_KERNEL_NAME=Driftwood-Kernel;
 
 DEFCONFIG_PATH=arch/arm64/configs
-DEFCONFIG_NAME=vendor/picasso_user_defconfig;
+DEFCONFIG_NAME=vendor/vangogh_user_defconfig;
 
 LOCAL_VERSION_NUMBER=$(cat $DEFCONFIG_PATH/$DEFCONFIG_NAME | grep CONFIG_LOCALVERSION= | cut -d = -f 2 | sed 's/"//g' | sed 's/-Driftwood-//g')
 TARGET_KERNEL_MOD_VERSION=$(make kernelversion)-$LOCAL_VERSION_NUMBER;
@@ -36,8 +36,8 @@ TARGET_KERNEL_MOD_VERSION=$(make kernelversion)-$LOCAL_VERSION_NUMBER;
 START_SEC=$(date +%s);
 CURRENT_TIME=$(date '+%Y-%m%d%H%M');
 
-ANYKERNEL_URL=https://codeload.github.com/EndCredits/AnyKernel3/zip/refs/heads/picasso;
-ANYKERNEL_PATH=AnyKernel3-picasso;
+ANYKERNEL_URL=https://codeload.github.com/inkhog/AnyKernel3/zip/refs/heads/vangogh;
+ANYKERNEL_PATH=AnyKernel3-vangogh;
 ANYKERNEL_FILE=anykernel.zip;
 
 link_all_dtb_files(){
